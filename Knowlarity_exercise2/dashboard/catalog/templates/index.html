@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Foosball Dashboard</h1>
+  <p>Welcome to the Dashboard, a website developed by <em>Sambhav for Knowlarity test</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The dashboard has the following record counts:</p>
+  <ul>
+    <li><strong>Teams:</strong> {{ num_teams }}</li>
+    <li><strong>Matches:</strong> {{ num_matches }}</li>
+  </ul>
+{% endblock %}

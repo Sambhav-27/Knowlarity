@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Top Teams</h1>
+  {% if team_list %}
+  <ul>
+    {% for team in team_list %}
+      <li>
+<!--         <a href="{{ team.get_absolute_url }}">{{ team.title }}</a> ({{team.player1}} {{team.player2}})
+ -->                
+          <a >{{ team.title }}</a> (Players: {{team.player1}}, {{team.player2}}. Points- {{team.points}})
+
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no teams in the Competition.</p>
+  {% endif %}       
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Matches List</h1>
+  {% if match_list %}
+  <ul>
+    {% for match in match_list %}
+      <li>
+<!--         <a href="{{ team.get_absolute_url }}">{{ team.title }}</a> ({{team.player1}} {{team.player2}})
+ -->                
+          <a >{{ match.serial_num }}</a> ({{match.team1}} vs {{match.team2}}, Winner: {{match.winner}})
+
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>No matches have been played yet.</p>
+  {% endif %}       
+{% endblock %}
